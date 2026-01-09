@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="1200" alt="StartPanel Logo" src="StartPanelLogo.jpg" />
+  <img width="1200" alt="StartPanel Logo" src="StartPanelScreenshot.jpg" />
 </div>
 
 # StartPanel
