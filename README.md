@@ -1,6 +1,4 @@
-<div align="center">
-  <img width="1200" alt="StartPanel Logo" src="StartPanelScreenshot.jpg" />
-</div>
+<div align=center><img width="1200" alt="StartPanel Logo" src="StartPanelScreenshot.jpg" /></div>
 
 # StartPanel
 
@@ -168,5 +166,7 @@ Din NAS kör nu en lokal webbserver, nu kan du återgå till att installera sjä
 
 Tips:
 Om du vill komma åt sidan även utanför hemmet kan du använda VPN.
+
+Besök [StartPanel på GitHub Pages](https://nicce70.github.io/StartPanel/) för att testa appen live!
 
 
