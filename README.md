@@ -167,6 +167,70 @@ Din NAS kör nu en lokal webbserver, nu kan du återgå till att installera sjä
 Tips:
 Om du vill komma åt sidan även utanför hemmet kan du använda VPN.
 
+---
+
+# 📌 FAQ (vanliga frågor)
+## ❓ Hur synkar jag dashboarden mellan flera enheter?
+
+Dashboarden sparas lokalt i webbläsaren (LocalStorage) och lagras inte i molnet.
+Det är ett privacy-first designval, men innebär att synkning sker manuellt.
+
+Så här gör du:
+
+1. Settings > Backup & Restore
+
+2. Backup → ladda ner JSON-filen
+
+3. Flytta filen till en annan enhet (t.ex. iPad)
+
+4. På andra enheten: Settings > Backup & Restore > Restore
+
+Klart ✔
+ 
+## ❓ Kan dashboarden synka automatiskt?
+
+Inte i nuläget.
+Auto-sync skulle kräva molnlagring, konto eller någon extern backend — och projektet är byggt för att fungera helt lokalt, utan server, utan login och utan att spara användarens data någonstans.
+ 
+## ❓ Innehåller backupfilen känsliga uppgifter? (t.ex. Homey PAT-tokens)
+
+Backupfilen kan innehålla:
+
+- din dashboard-layout
+- widgetkonfigurationer
+- eventuella tokens (t.ex. Homey PAT)
+
+Det är ingen säkerhetsrisk i sig, men filen bör hanteras som en personlig konfigurationsfil:
+
+- lagra den på en trygg plats
+- undvik att skicka den okrypterat
+- dela den inte om du inte vill dela din setup
+
+Detta är en del av projektets integritetsvänliga upplägg — ingen information skickas till molntjänster eller tredje part.
+ 
+## ❓ Varför sparas inget i molnet?
+
+För att:
+
+- kunna köras helt offline
+- undvika konton / login / backend
+- ge användaren full kontroll över sina data
+- undvika molnberoenden (t.ex. tjänster som läggs ner)
+
+Dessutom passar det bra ihop med Homey-användares generella preferens att äga sin setup med egen hårdvara.
+ 
+## ❓ Måste jag köra lokalt på en NAS?
+
+Nej — men det ger fler funktioner.
+
+Körsätt -	  Funktioner
+GitHub Pages -   Webhooks (skicka kommandon)
+Lokalt / NAS -   Läsa sensorer + styra enheter (polling)
+ 
+## ❓ Fungerar den bara med Homey Pro 2023?
+
+Ja vid polling, det är den primära målgruppen i nuläget. Webhook kan fungera med äldre modeller
+
 Besök [StartPanel på GitHub Pages](https://nicce70.github.io/StartPanel/) för att testa appen live!
 
 
