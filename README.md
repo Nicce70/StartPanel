@@ -223,9 +223,9 @@ Dessutom passar det bra ihop med Homey-användares generella preferens att äga 
 
 Nej — men det ger fler funktioner.
 
-Körsätt -	  Funktioner
-GitHub Pages -   Webhooks (skicka kommandon)
-Lokalt / NAS -   Läsa sensorer + styra enheter (polling)
+Körsätt -	  Funktioner  
+GitHub Pages -   Webhooks (skicka kommandon)  
+Lokalt / NAS -   Läsa sensorer + styra enheter (polling)  
  
 ## ❓ Fungerar den bara med Homey Pro 2023?
 
