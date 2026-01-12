@@ -170,6 +170,7 @@ Om du vill komma åt sidan även utanför hemmet kan du använda VPN.
 ---
 
 # 📌 FAQ (vanliga frågor)
+
 ## ❓ Hur synkar jag dashboarden mellan flera enheter?
 
 Dashboarden sparas lokalt i webbläsaren (LocalStorage) och lagras inte i molnet.
@@ -217,7 +218,8 @@ För att:
 - ge användaren full kontroll över sina data
 - undvika molnberoenden (t.ex. tjänster som läggs ner)
 
-Dessutom passar det bra ihop med Homey-användares generella preferens att äga sin setup med egen hårdvara.
+Dessutom passar det bra ihop med Homey-användares generella preferens att äga sin setup med egen hårdvara.  
+Med detta sagt är det <b>extra viktigt</b> att du gör backup regelbundet, för din webbläsare kan tappa inställningarna vid en uppdatering, crash, app-uppdatering osv!
  
 ## ❓ Måste jag köra lokalt på en NAS?
 
@@ -227,9 +229,26 @@ Körsätt -	  Funktioner
 GitHub Pages -   Webhooks (skicka kommandon)  
 Lokalt / NAS -   Läsa sensorer + styra enheter (polling)  
  
-## ❓ Fungerar den bara med Homey Pro 2023?
+## ❓ Fungerar den bara med Homey Pro 2023/2026?
 
-Ja vid polling, det är den primära målgruppen i nuläget. Webhook kan fungera med äldre modeller
+Ja när polling används (läsa / skicka). Med enbart Webhook (skicka på vinst och förlust) kan det fungera med äldre modeller.  
+Det behövs nämligen en API (PAT) kod, och det har bara Homey 2023 Pro och nyare.
+
+## ❓ Varför syns bara en bokstav och inte ikonen till länkarna ibland?
+
+Det sporadiska beteendet du ser beror på flera faktorer som är utanför appens direkta kontroll:  
+- Tjänsternas Cache: Ikon-tjänsterna har sin egen "cache" (ett temporärt minne). Om en tjänst misslyckas med att hämta en ikon en gång, kan den "komma ihåg" det misslyckandet ett tag. När deras cache sedan uppdateras (vilket kan ta timmar eller dagar), kan ikonen plötsligt dyka upp igen. Samma sak gäller omvänt – en fungerande ikon kan försvinna om tjänstens cache av någon anledning blir korrupt.
+- Tillfällig Otillgänglighet: Tjänsterna vi använder kan ha korta avbrott eller vara överbelastade. Om appen försöker hämta en ikon precis under ett sådant avbrott, misslyckas det. Nästa gång du laddar sidan kan tjänsten fungera igen.
+- Webbplatser som blockerar: Vissa webbplatser gillar inte att automatiska tjänster hämtar deras ikoner och kan blockera dem. Detta kan ändras över tid.
+- Din webbläsares cache: Även din egen webbläsare har en cache. Den kan ibland hålla kvar en trasig bildfil eller ett misslyckat försök att ladda en bild, vilket gör att ikonen inte visas förrän cachen rensas eller uppdateras.
+
+## ❓ Är detta en officiell Homey App?
+
+- Nej, och den har begränsad Homey integration
+
+
+
+---
 
 Besök [StartPanel på GitHub Pages](https://nicce70.github.io/StartPanel/) för att testa appen live!
 
