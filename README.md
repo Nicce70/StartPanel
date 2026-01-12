@@ -51,7 +51,7 @@ Allt annat i appen fungerar som vanligt.
 ---
 
 # OBS!
-De två kommande sätten kräver att du också plockar ut en PAT-kod (API-nyckel) från din Homey Pro via:  
+De nedan sättet kräver att du också plockar ut en PAT-kod (API-nyckel) från din Homey Pro via:  
 Inställningar > API-nycklar - + Ny API Nyckel. Kopiera den och spara, den ska klistras in i appen Settings > Homey > Personal Access Token.
 
 - Och värt att tillägga, enbart Polling fungerar i dagsläget, dvs den hämtar data från Homey med jämna mellanrum (som du anger), så det blir tyvärr ingen Live uppdatering vilket kräver WebSocket (wss) via proxy, något som i nuläget inte är implementerat.
