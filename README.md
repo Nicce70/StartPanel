@@ -174,19 +174,20 @@ Om du vill komma åt sidan även utanför hemmet kan du använda VPN.
 ## ❓ Hur synkar jag dashboarden mellan flera enheter?
 
 Dashboarden sparas lokalt i webbläsaren (LocalStorage) och lagras inte i molnet.
-Det är ett privacy-first designval, men innebär att synkning sker manuellt.
+Det är ett privacy-first designval, så man får helt enkelt kopiera settings filen till en ny webbläsare manuellt.
 
 Så här gör du:
 
 1. Settings > Backup & Restore
 
-2. Backup → ladda ner JSON-filen
+2. Tryck Export Data → ladda ner JSON-filen
 
 3. Flytta filen till en annan enhet (t.ex. iPad)
 
-4. På andra enheten: Settings > Backup & Restore > Restore
+4. På andra enheten: Settings > Backup & Restore > Import Data
 
-Klart ✔
+Klart ✔  
+Se till att göra Backup ofta! Och förvara filen utom räckhåll från obehöriga då den inte är krypterad! 
  
 ## ❓ Kan dashboarden synka automatiskt?
 
