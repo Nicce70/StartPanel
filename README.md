@@ -232,8 +232,10 @@ Lokalt / NAS -   Läsa sensorer + styra enheter (polling)
  
 ## ❓ Fungerar den bara med Homey Pro 2023/2026?
 
-Ja när polling används (läsa / skicka). Med enbart Webhook (skicka på vinst och förlust) kan det fungera med äldre modeller.  
-Det behövs nämligen en API (PAT) kod, och det har bara Homey 2023 Pro och nyare.
+Ja när polling används (läsa + styra).
+Med enbart Webhook (skicka kommandon) kan äldre modeller fungera.
+
+(PAT / API-kod behövs för full funktion — och det har Homey Pro 2023 och nyare.)
 
 ## ❓ Varför syns bara en bokstav och inte ikonen till länkarna ibland?
 
@@ -247,6 +249,61 @@ Det sporadiska beteendet du ser beror på flera faktorer som är utanför appens
 
 - Nej, och den har begränsad Homey integration
 
+## ❓ Vad händer vid uppdateringar – försvinner min data?
+
+I normalfallet nej.
+Dashboarden ligger i webbläsarens LocalStorage och påverkas inte av vanlig koduppdatering.
+
+<b>Men</b> det kan hända om:
+- webbläsaren rensar data
+- appen byter storage-schema
+- stora versionshopp görs
+- browser addons påverkar storage
+- användaren bygger om miljön (t.ex. ny NAS)
+
+Därför rekommenderas starkt Backup & Restore regelbundet.
+
+## ❓ Är appen gratis?
+
+Ja.  
+Det enda är att en liten donations banner dyker upp med långa mellanrum om att stödja kattstallet, vilket är helt friviligt så klart. Det är det enda.
+
+## ❓ Varför uppdaterar inte dashboarden i realtid? (t.ex. MQTT/WebSocket)
+
+Dashboarden använder polling för att hämta sensorer och enhetsstatus från Homey.
+Polling betyder att appen frågar Homey med ett visst tidsintervall (t.ex. var 10 sek, var 20 sek, var 30 sek osv).
+
+Du kan själv ställa in intervallet under Settings > Homey > Polling Interval.
+
+👉 Varför just polling?
+
+För att det är:
+
+✔ enkelt att komma igång med  
+✔ fungerar på alla installationer  
+✔ kräver ingen extra mjukvara  
+✔ fungerar även om du hostar via GitHub Pages  
+✔ fungerar även utan NAS eller MQTT Broker  
+
+Polling är dessutom robust och fungerar även om Homey omstartas, nätet hänger sig eller skript kraschar.
+
+## 👉 Varför ingen MQTT / WebSocket / realtidsuppdatering?
+
+Realtid är möjligt, men betydligt mer avancerat.
+Det skulle kräva t.ex.:
+
+- MQTT broker (på NAS eller liknande)
+- MQTT Hub på Homey
+- konfigurering av topics/events
+- extra inställningar i dashboarden
+
+Det blir snabbt krångligt för många användare, och målet med projektet är att man ska kunna bara köra utan extra komponenter.
+
+Polling funkar “tillräckligt bra” för de flesta användningar (lampor, sensorer, status etc) och är enkelt att komma igång med.
+
+## ❓ Måste jag ha en Homey för att använda den här appen?
+
+Nej, det går utmärkt att bara köra den som den är som en startsida med widgets. Homey Pro är mer en extra funktion egentligen.
 
 
 ---
