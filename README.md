@@ -19,6 +19,8 @@ Och det är en **öppen källkod**.
 
 Det är en kombination av **startpage och dashboard** där du kan samla länkar och olika widgets.  
 
+För vanliga frågor FAQ, se längre ner på sidan.  
+
 ## Integration med Homey Pro 2023
 
 För att använda den mot Homey Pro 2023, använder du antingen webhooks eller kör appen lokalt på din dator eller på en NAS.  
@@ -244,6 +246,16 @@ Det sporadiska beteendet du ser beror på flera faktorer som är utanför appens
 - Tillfällig Otillgänglighet: Tjänsterna vi använder kan ha korta avbrott eller vara överbelastade. Om appen försöker hämta en ikon precis under ett sådant avbrott, misslyckas det. Nästa gång du laddar sidan kan tjänsten fungera igen.
 - Webbplatser som blockerar: Vissa webbplatser gillar inte att automatiska tjänster hämtar deras ikoner och kan blockera dem. Detta kan ändras över tid.
 - Din webbläsares cache: Även din egen webbläsare har en cache. Den kan ibland hålla kvar en trasig bildfil eller ett misslyckat försök att ladda en bild, vilket gör att ikonen inte visas förrän cachen rensas eller uppdateras.
+
+## ❓ Kan man ha flera Dashboards?
+Ja, det kan man.  
+Gå in under Settings > Dashboards. Där skapar du fler och redigerar befintliga.  
+Du kan välja om de ska synas som tabs eller som en drop-down meny.  
+
+## ❓ Varför ligger gamla versioner kvar under /assets?
+
+Ifall en ny version ställer till det kan man backa genom att redigera sin index.html-fil genom att ändra vilken .js fil den pekar på under /assets.  
+Vilken version respektive .js fil är ser man på GitHub under /docs/assets
 
 ## ❓ Är detta en officiell Homey App?
 
