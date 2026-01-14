@@ -317,6 +317,50 @@ Polling funkar “tillräckligt bra” för de flesta användningar (lampor, sen
 
 Nej, det går utmärkt att bara köra den som den är som en startsida med widgets. Homey Pro är mer en extra funktion egentligen.
 
+## ❓ Hur får jag in väg- / trafik-kameror i dashboarden?
+
+Det går att lägga till trafikkameror som automatiskt uppdaterande bilder (stillbilder), t.ex. från Trafiken.nu eller Trafikverket.
+
+### 🌍 Var finns kamerorna?
+
+Du kan hämta dem från t.ex:
+
+- Trafiken.nu (Stockholm, Göteborg m.fl.)
+
+- Trafikverket (rikstäckande)
+
+De publicerar stillbilder som uppdateras ~1 gång per minut.
+
+### 🧩 Hur hittar jag själva bild-URL:en?
+
+Det är den kluriga delen — bildadresserna skyltas inte öppet, men går att hitta så här:
+
+1. Öppna t.ex. Trafiken.nu i Firefox eller Chrome
+
+2. Välj en kamera du vill titta på
+
+3. Tryck F12 → öppna webbutvecklarverktygen
+
+4. Gå till fliken Network / Nätverk
+
+5. Vänta tills sidan uppdaterar kamerabilden
+
+6. Leta efter en fil som slutar på .jpg (eller liknande)
+
+7. Högerklicka → Copy URL / Kopiera länkadress
+
+Detta är den direkta bildlänken till kameran.
+
+### 🖼 Hur lägger jag in den i dashboarden?
+
+1. Lägg till widgeten Image
+
+2. Klistra in bild-URL:en
+
+3. Ställ in update interval t.ex. 60 sek (lagom för trafikbilder)
+
+Klart ✔
+
 
 ---
 
