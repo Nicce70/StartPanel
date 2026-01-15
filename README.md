@@ -362,6 +362,19 @@ Detta är den direkta bildlänken till kameran.
 Klart ✔
 
 
+## ❓ Varför måste jag köra StartPanel lokalt via en egen webbserver för att integrera med Homey Pro?
+
+Webbläsare har inbyggda säkerhetsregler som hindrar webbsidor från att kommunicera direkt med lokala enheter på ditt nätverk. Detta kallas CORS (Cross-Origin Resource Sharing). En HTTPS-sida får till exempel inte prata med en HTTP-enhet på det lokala nätet.
+
+Genom att köra StartPanel lokalt (via t.ex. en liten webbserver) kringgår man dessa begränsningar och kan kommunicera med Homey Pro i LAN:et.
+
+Vissa enheter — till exempel iPad/Safari — kan ändå blockera förfrågningar trots att allt körs lokalt och ligger på samma nät, just på grund av extra hårda säkerhetsregler i webbläsaren. Därför behövs ibland lokalt webbhostande för att få full funktion.
+
+
+## ❓ Varför kan man inte lägga in länkar till lokala HTML-sidor eller appar på datorn/mobilen?
+
+Samma här, webbläsare blockerar av säkerhetsskäl länkar som skulle kunna öppna lokala filer eller köra appar direkt på din enhet. Detta förhindrar t.ex. länkar till file://, C:\…, app://, eller lokala .html-filer samt direkta appstarter. Det är en säkerhetsfunktion i webbläsare för att skydda användaren.
+
 ---
 
 Besök [StartPanel på GitHub Pages](https://nicce70.github.io/StartPanel/) för att testa appen live!
