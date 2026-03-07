@@ -4,6 +4,7 @@ https://github.com/StartPanelApp/StartPanelApp.github.io
 or if you want to run it:  
 https://startpanelapp.github.io/
 
+This repo will be discontinued! 
 
 # StartPanel
 
