@@ -1,10 +1,9 @@
-This repository has got a new adress, visit:  
+# This repository has got a new adress, visit:  
 https://github.com/StartPanelApp/StartPanelApp.github.io
 
 or if you want to run it:  
 https://startpanelapp.github.io/
 
-<div align=center><img width="1200" alt="StartPanel Logo" src="StartPanelScreenshot.jpg" /></div>
 
 # StartPanel
 
